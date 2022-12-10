@@ -1,0 +1,181 @@
+.pokemons {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.normal {
+    background-color: #a8a77a;
+}
+
+.fire {
+    background-color: #ee8130;
+}
+
+.water {
+    background-color: #6390f0;
+}
+
+.electric {
+    background-color: #f7cf2e;
+}
+
+.grass {
+    background-color: #7ac74c;
+}
+
+.ice {
+    background-color: #96d9d6;
+}
+
+.fighting {
+    background-color: #c22e28;
+}
+
+.poison {
+    background-color: #a33ea1;
+}
+
+.ground {
+    background-color: #e2bf65;
+}
+
+.flying {
+    background-color: #a98ff3;
+}
+
+.psychic {
+    background-color: #f95587;
+}
+
+.bug {
+    background-color: #a6b91a;
+}
+
+.rock {
+    background-color: #b6a136;
+}
+
+.ghost {
+    background-color: #735797;
+}
+
+.dragon {
+    background-color: #6f35fc;
+}
+
+.dark {
+    background-color: #705746;
+}
+
+.steel {
+    background-color: #b7b7ce;
+}
+
+.fairy {
+    background-color: #d685ad;
+}
+
+/* 0.5rem EH METADO DO PARAMETRO USADO NO ESTILO ACIMA*/
+/*DISPLAY "flex" DÁ DIREÇÃO AO CONTEUDO ( "column" UM EMBAIXO DO OUTRO "row" um na frente do outro*/
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+
+}
+
+.pokemon .number {
+    color: #000;
+    opacity: 0.3;
+    text-align: right;
+    font-size: .625rem;
+}
+
+.pokemon .name {
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom: .25rem;
+}
+
+/*"align-items" AJUSTA OS ITENS AO CENTRO*/
+/*"justify-content" JUSTIFICA O ESPAÇO ENTRE ELES*/
+.pokemon .detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.pokemon .detail .types {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.pokemon .detail .types .type {
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    border-radius: 1rem;
+    text-align: center;
+    filter: brightness(1.15);
+}
+
+/*COMANDO "max-width" NÃO DEIXA O ITEM ESTRAPOLAR (VAZAR) SEU TAMANHO*/
+/*"align-self: flex-end" ALINHA O CONTEUDO A DIREITA*/
+.pokemon .detail img {
+    max-width: 100%;
+    height: 70px;
+
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.pagination button {
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .9rem;
+    color: #fff;
+    background-color: #6c79db;
+    border: none;
+    border-radius: 1rem;
+}
+
+/*O "@media screen" AJUSTA O CONTEUDO CONFORME O TAMANHO DA TELA,
+o grid-template" MANTEM UM TAMANHO PADRÃO COMO REFERÊNCIA E DAÍ VAI,
+3 VALORES FORAM USADOS 380px, 576px, 992px.
+*/
+@media screen and (min-width: 380px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr;
+
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    }
+}

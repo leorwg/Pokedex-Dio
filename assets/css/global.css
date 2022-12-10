@@ -1,0 +1,33 @@
+/*--O ASTERISCO LEVA A MODIFICALÇAO PARA TODAS AS INFORMAÇÕES CONTIDAS NO DOC*/
+/*"box-sizing: borde-box" INFORMA O LIMITE DA BORDA COMO REFERÊNCIA TOTAL PARA MANIPULAÇÃO DOS ESTILOS*/
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f6f8fc;
+}
+
+/* INFORMAÇÃO ABAIXO EH RELATIVO A MEDIDA, SE POUCO ESPAÇO OU MUITO,
+ AS INFORMAÇÕES SERÃO AJUSTADAS NA TELA (ex: 1rem)
+ --O CONTENT ESTA RELACIONADO AO TOPICO SEÇÃO DO INDEX, "100vw / vh" MANTEM SEMPRE 
+ CRESCENTE A INFORMAÇÃO DA TELA*/
+.content {
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    background-color: #fff;
+}
+
+/* COMANDO ABAIXO AJUSTA OS ITENS EM MOBILE, O " 100vw / vh" FORAM TROCADOS POR AUTO,
+PARA SE AJUSTAREM AO TAMANHO DA TELA.*/
+@media screen and (min-width: 992px) {
+    .conten {
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+}
+
